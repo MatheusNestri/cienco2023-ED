@@ -1,0 +1,49 @@
+#include <iostream>
+#include <cstdlib>
+#include <time.h>
+
+using namespace std;
+
+#define TAMANHO 3
+
+int main()
+{
+	int vetA[TAMANHO], vetB[TAMANHO], vetSoma[TAMANHO];
+    srand(time(NULL));
+
+    for(int i = 0; i < TAMANHO; i++)
+    {
+        vetA[i] = rand() % 10 + 1;
+        vetB[i] = rand() % 10 + 1;
+    }
+
+    for(int i = 0; i < TAMANHO; i++)
+    {
+        vetSoma[i] = vetA[i] + vetB[i];
+    }
+
+    cout << "Vetor A" <<endl;
+
+     for(int i = 0; i < TAMANHO; i++)
+    {
+        cout << vetA[i] << " ";
+    }
+
+    cout << endl;
+    cout << endl;
+    cout << "Vetor B" <<endl;
+
+     for(int i = 0; i < TAMANHO; i++)
+    {
+        cout << vetB[i] << " ";
+    }
+
+    cout << endl;
+    cout << endl;
+    cout << "Soma" <<endl;
+
+    for(int i = 0; i < TAMANHO; i++)
+    {
+        cout << vetSoma[i] << " ";
+    }
+}
